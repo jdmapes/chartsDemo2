@@ -40,8 +40,6 @@ class ViewController: UIViewController, ChartViewDelegate {
         xAxis.valueFormatter = IndexAxisValueFormatter(values:days)
         xAxis.granularity = 1
         
-        
-        
         // Configure the Y Axis
         let yAxis = barChart.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 14)
@@ -74,12 +72,6 @@ class ViewController: UIViewController, ChartViewDelegate {
             entries.append(BarChartDataEntry(x: Double(x), y: Double.random(in: 0...12)))
             entries2.append(BarChartDataEntry(x: Double(x), y: Double.random(in: 0...12)))
         }
-        
-        // Attempt to figure out how to create xAxis labeling
-//        for xValue in xValues.enumerated() {
-//            entries.append(BarChartDataEntry(x: Double(xValue)!, y: Double.random(in: 0...12)))
-//            entries2.append(BarChartDataEntry(x: Double(xValue)!, y: Double.random(in: 0...12)))
-//        }
        
         
         // Data set build
@@ -94,33 +86,5 @@ class ViewController: UIViewController, ChartViewDelegate {
         barChart.rightAxis.enabled = false
         barChart.center = view.center
     }
-    
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//
-//        barChart.frame = CGRect(x: 0, y: 0,
-//                                width: self.view.frame.size.width,
-//                               height: self.view.frame.size.width)
-//        barChart.center = view.center
-//        view.addSubview(barChart)
-//
-//        var entries = [BarChartDataEntry]()
-//
-//        for x in 0..<10 {
-//            entries.append(BarChartDataEntry(x: Double(x),
-//                                             y: Double(x))
-//                           )
-//        }
-//
-//        let set = BarChartDataSet(entries: entries)
-//        set.colors = ChartColorTemplates.joyful()
-//
-//        let data = BarChartData(dataSet: set)
-//        barChart.data = data
-//
-//    }
-
-
 }
 
