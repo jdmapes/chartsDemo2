@@ -52,7 +52,7 @@ class SecondViewController: UIViewController, ChartViewDelegate {
         
         var entries = [ChartDataEntry]()
         
-        for x in 0..<10 {
+        for x in 0..<7 {
             entries.append(ChartDataEntry(x: Double(x),
                                              y: Double(x))
                            )

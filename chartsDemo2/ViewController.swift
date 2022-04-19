@@ -26,7 +26,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         let days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]
         
         barChart.dragEnabled = true
-        
+        barChart.backgroundColor = .systemFill
         
         // Configure the X axis
         let xAxis = barChart.xAxis
@@ -61,6 +61,8 @@ class ViewController: UIViewController, ChartViewDelegate {
         l.formSize = 9
         l.font = UIFont(name: "HelveticaNeue-Light", size: 12)!
         l.xEntrySpace = 6
+        
+        barChart.animate(xAxisDuration: 3.0)
         
         // Supply data
         var entries = [BarChartDataEntry]()
